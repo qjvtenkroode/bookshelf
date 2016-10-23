@@ -1,0 +1,15 @@
+language: python
+python:
+    - "3.3"
+    - "3.4"
+    - "2.6"
+    - "2.7"
+# install dependencies
+install: 
+    - "make bootstrap-dev"
+    - "pip install coveralls"
+# do tests
+script: 
+    - "make test"
+# push data to coveralls
+after_success: coveralls
