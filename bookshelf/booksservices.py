@@ -6,7 +6,7 @@ import services
 from bson.objectid import ObjectId
 
 
-class BooksService(services.Services):
+class BooksServices(services.Services):
 
     exposed = True
 
