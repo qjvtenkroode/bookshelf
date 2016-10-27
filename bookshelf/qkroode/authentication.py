@@ -1,6 +1,6 @@
-import hashlib
-import getpass
 import argparse
+import getpass
+import hashlib
 import json
 
 PASSWD_FILE = './etc/passwd'

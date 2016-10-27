@@ -1,11 +1,25 @@
 import cherrypy
+import os
 
-import booksservices
 import qkroode.authentication
+import services.booksservices
 
 if __name__ == '__main__':
     cherrypy.tree.mount(
-        booksservices.BooksServices(), '/api/books', {
+        None, '/', {
+            '/': {
+                'request.dispatch': cherrypy.dispatch.Dispatcher(),
+                'tools.auth_basic.on': True,
+                'tools.auth_basic.realm': 'localhost',
+                'tools.auth_basic.checkpassword': qkroode.authentication.validate_user,
+                'tools.staticdir.on' : True,
+                'tools.staticdir.dir' : os.getcwd() + '/catalog',
+                'tools.staticdir.index' : 'catalog.html'
+            }
+        }
+    )
+    cherrypy.tree.mount(
+        services.booksservices.BooksServices(), '/api/books', {
             '/': {
                 'request.dispatch': cherrypy.dispatch.MethodDispatcher(),
                 'tools.auth_basic.on': True,
