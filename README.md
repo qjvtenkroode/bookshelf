@@ -9,4 +9,4 @@ The backend relies on:
 ## GUI
 Basic GUI which connects to the backend through REST.
 
-![GUI version 0.1](qjvtenkroode.github.com/bookshelf/docs/img/gui-v0.1.png)
+![GUI version 0.1](./docs/img/gui-v0.1.png)
