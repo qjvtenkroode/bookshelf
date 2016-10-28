@@ -1,2 +1,4 @@
 # production
-cherrypy
+CherryPy==8.1.2
+pymongo==3.3.0
+six==1.10.0

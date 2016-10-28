@@ -1,0 +1,28 @@
+#menu-column {
+    background-color: #63888B;
+    bottom: 0;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    width: 150px;
+}
+
+/* Covers will be 160x120 (hxw) */
+#books-column {
+    height: 100%;
+    margin-left: 150px;
+    overflow: auto;
+    position: fixed;
+    width: 350px;
+}
+
+img.coverflow {
+    max-width: 100%;
+}
+
+/* Details covers will be 500x375 (hxw) */
+#details-column {
+    margin-left: 500px;
+    padding-left: 10px;
+    position: fixed;
+}
