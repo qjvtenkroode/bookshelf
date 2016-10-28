@@ -12,9 +12,9 @@ if __name__ == '__main__':
                 'tools.auth_basic.on': True,
                 'tools.auth_basic.realm': 'localhost',
                 'tools.auth_basic.checkpassword': qkroode.authentication.validate_user,
-                'tools.staticdir.on' : True,
-                'tools.staticdir.dir' : os.getcwd() + '/catalog',
-                'tools.staticdir.index' : 'catalog.html'
+                'tools.staticdir.on': True,
+                'tools.staticdir.dir': os.getcwd() + '/catalog',
+                'tools.staticdir.index': 'catalog.html'
             }
         }
     )
